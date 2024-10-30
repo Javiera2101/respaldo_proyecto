@@ -24,7 +24,7 @@ public class SecurityConfig {
                 .disable())
             .authorizeHttpRequests(authRequest -> 
                 authRequest
-                .requestMatchers("/auth/**").permitAll()//el publico
+                .requestMatchers("/public/**").permitAll()//el publico
                 .anyRequest().authenticated()
             )
             .formLogin(withDefaults())
