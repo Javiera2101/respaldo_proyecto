@@ -7,12 +7,18 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/private")
+@RequestMapping("/auth")
 @RequiredArgsConstructor
-public class PrivateController {
-    
-    @PostMapping(value = "demo")
-    public String welcome(){
-        return "welcome";
+public class AuthController {
+
+    @PostMapping(value = "login")
+    public String login() {
+        return "index";
     }
+
+    @PostMapping(value = "register")
+    public String register(){
+        return "register";
+    }
+
 }
